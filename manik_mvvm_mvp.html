@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang=en>
+
+
+
+<strong><p>Table of Contents:</p></strong>
+
+            
+<li><a href='#introduction' target="_blank" rel="nofollow">Introduction</a></li>
+<li><a href='#need-of-architecture' target="_blank" rel="nofollow">Why we need any architecture?</a></li>
+<li><a href='#what-is-mvp' target="_blank" rel="nofollow">What is MVP?</a></li>
+<li><a href='#pros-of-mvp' target="_blank" rel="nofollow">Pros of MVP</a></li>
+<li><a href='#cons-of-mvp' target="_blank" rel="nofollow">Cons of MVP</a></li>
+<li><a href='#what-is-mvvm' target="_blank" rel="nofollow">What is MVVM?</a></li>
+<li><a href='#pros-of-mvvm' target="_blank" rel="nofollow">Pros of MVVM</a></li>
+<li><a href='#cons-of-mvvm' target="_blank" rel="nofollow">Cons of MVVM</a></li>
+<li><a href='#diffrences-between-mvp-and-mvvm'>Diffrences between MVP and MVVM</a></li>
+
+</ul>
+<br>
+
+<h3 id='introduction'>Introduction</h3>
+<br>
+
+In this blog I'm gonna tell you which is better architecture between MVP and MVVM. Before this I want to talk about why we need any architecture<br><br><br>
+
+<h3 id='need-of-architecture'>Need of Architecture</h3>
+<br>
+
+<ol>
+<li>Helps developers to change only business logic without affecting the entire system.</li>
+<li>Lower the maintainence cost.</li>
+<li>Developers can focus on business logic as an ideal architecture seperates the code.</li>
+<li>This makes easy for developers to test their code.</li>
+</ol><br><br>
+
+<h3 id='what-is-mvp'>What is MVP?</h3>
+<br>
+
+MVP stands for Model-View-Presenter . Basically it is a software design pattern or you can say an architectural pattern which helps you to organize your code in three different parts which eases automated unit testing:<br>
+
+Diagram of MVP architecture : <br>
+<center><img class="center" src="C:\Users\Manik Gupta\Desktop\mvp_diagram.png"  style="width:500px;height:200px;" alt="MVP image cap"></center>
+
+<h4 id='model-mvp'>Model</h4>
+<ol>
+<li>It controls how data is created , stored in database.</li>
+<li>It is responsible for functionalities such as fetching of data from an API.</li>
+<li>Model can directly communicate with Presenter but not with View.</li>
+</ol>
+
+<h4 id='view-mvp'>View</h4>
+<ol>
+<li>This component contains the visual part of an application and does not contain any business logic.</li>
+<li>In Android, View can be considered as Activities , Fragments or view.</li>
+<li>View is in one to one relationship with Presenter.</li>
+</ol>
+
+<h4 id='presenter-mvp'>Presenter</h4>
+<ol>
+<li>The Presenter is in between Model and View.</li>
+<li>This component contains all the business logic of application.</li>
+<li>It receives data from model and shows it in View.</li>
+</ol><br><br>
+
+<h3 id='pros-of-mvp'>Pros of MVP</h3>
+<br>
+<ol>
+<li>Testing is easy in MVP as business logic is seperated from UI.</li>
+<li>Low maintainence cost.</li>
+<li>The code written in View such as Activity or Fragment is comparatively less as all business logic is moved to Presenter.</li>
+</ol><br><br>
+
+<h3 id='cons-of-mvp'>Cons of MVP</h3>
+<br>
+<ol>
+<li>Large number of interfaces.</li>
+<li>The code written in MVP is excessive</li>
+</ol><br><br>
+
+<h3 id='what-is-mvvm'>What is MVVM</h3>
+<br>
+MVVM stands for Model-View-ViewModel.<br><br>
+
+Diagram of MVVM architecture : <br>
+<center><img class="center" src="C:\Users\Manik Gupta\Desktop\mvvm_diagram.png"  style="width:500px;height:200px;" alt="MVP image cap"></center>
+
+<h4 id='model-mvvm'>Model</h4>
+<ol>
+<li>The Model layer of MVVM is similar to Model layer in MVP.</li>
+<li>It also contains data of application.</li>
+<li>Model layer can't communicate directly with View.</li>
+<li>It exposes data to View via ViewModels.</li>
+</ol>
+
+<h4 id='view-mvvm'>View</h4>
+<ol>
+<li>This layer contains the visual part of an application and does not contain any business logic.</li>
+<li>This layer observes the ViewModel.</li>
+<li>This layer also transmits data to ViewModel.</li>
+</ol>
+
+<h4 id='viewmodel-mvvm'>ViewModel</h4>
+<ol>
+<li>Viewmodel acts as a link between Model and View.</li>
+<li>Viewmodel retreives data from Model layer and sends to View, It doesn't care how the data is being used.</li>
+<li>It holds the actual reference to data for View.</li>
+</ol><br><br>
+
+<h3 id='pros-of-mvvm'>Pros of MVVM</h3>
+<br>
+<ol>
+<li>Less number of interfaces and classes as compared to MVP.</li>
+<li>The code written in MVVM is simplified.</li>
+<li>It allows the developers to change the code efficiently.</li>
+</ol><br><br>
+
+<h3 id='cons-of-mvvm'>Cons of MVVM</h3>
+<br>
+<ol>
+<li>In MVVM model , writing a test is comparatively difficult than MVP.</li>
+<li>In MVVM some code has to be written in XML so it increases the complexity in debugging.</li>
+</ol><br><br>
+
+<h3 id='diffrences-between-mvp-and-mvvm'>Diffrences between MVP and MVVM</h3>
+<br>
+<ol>
+<li>In MVVM , ViewModel replaces the Presenter in middle layer.</li>
+<li>In MVVM, View and ViewModel is in one to many relationship whereas in MVP ,View and Presenter is in one to one relationship.</li>
+<li>In MVP, number of classes is more as compared to MVVM.</li>
+<li>In MVVM, ViewModel holds reference to data whereas in MVP, Presener holds reference to View.</li>
+<li>In both MVVM and MVP , View is the entry point of application.</li>
+
+</ol><br><br>
+
+
+
+
+
+
+That's All! Happy Coding!
+<br><br><br>
+
+
+
+
+
+
+
+
+</html>
